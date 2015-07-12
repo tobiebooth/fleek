@@ -1,0 +1,19 @@
+{
+    "name": "tbooth/fleek",
+    "description": "Object oriented wrapper and helpers for libvirt-php.",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Tobie Booth",
+            "email": "tbooth@hindbra.in"
+        }
+    ],
+    "require": {
+        "sabre/xml": "^1.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Fleek\\": "src"
+        }
+    }
+}
