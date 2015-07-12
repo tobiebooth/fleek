@@ -17,7 +17,7 @@ class OS extends BaseEntity
      * @param  Writer
      * @return void
      */
-    function xmlSerialize(Writer $writer)
+    public function xmlSerialize(Writer $writer)
     {
         $data = [
             [
@@ -33,7 +33,7 @@ class OS extends BaseEntity
         foreach ($this->bootDevices as $bootDevice) {
             $data[] = [
                 'name' => 'boot',
-                'value' => $this->boot,
+                'value' => null,
                 'attributes' => ['dev' => $bootDevice]
             ];
         }

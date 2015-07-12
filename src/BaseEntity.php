@@ -7,6 +7,9 @@ use Sabre\Xml\Writer;
 
 class BaseEntity implements XmlSerializable
 {
+    protected $entityName;
+    protected $entityAttributes = [];
+
     /**
      * Serializes entity to XML
      *
@@ -46,7 +49,7 @@ class BaseEntity implements XmlSerializable
             }
 
             if (is_array($element)) {
-               $element = array_map(function($item) {
+                $element = array_map(function($item) {
                     if (is_object($item)) {
                         return [
                             'name' => $item->entityName,
@@ -56,7 +59,7 @@ class BaseEntity implements XmlSerializable
                     }
                 }, $element);
 
-               $elements[$key] = $element;
+                $elements[$key] = $element;
             }
         }
 

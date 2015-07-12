@@ -33,7 +33,7 @@ class Disk extends BaseEntity
      * @param  Writer
      * @return void
      */
-    function xmlSerialize(Writer $writer)
+    public function xmlSerialize(Writer $writer)
     {
         $data = [
             [
