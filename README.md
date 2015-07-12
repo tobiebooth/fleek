@@ -1,5 +1,9 @@
 ## Fleek
 
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/tobiebooth/fleek/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/tobiebooth/fleek/?branch=master)
+[![Code Coverage](https://scrutinizer-ci.com/g/tobiebooth/fleek/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/tobiebooth/fleek/?branch=master)
+[![Build Status](https://scrutinizer-ci.com/g/tobiebooth/fleek/badges/build.png?b=master)](https://scrutinizer-ci.com/g/tobiebooth/fleek/build-status/master)
+
 ```php
 use Fleek\Domain;
 use Fleek\OS;
