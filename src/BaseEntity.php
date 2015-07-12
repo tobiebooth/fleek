@@ -57,6 +57,8 @@ class BaseEntity implements XmlSerializable
                             'attributes' => $item->entityAttributes
                         ];
                     }
+
+                    return $item;
                 }, $element);
 
                 $elements[$key] = $element;

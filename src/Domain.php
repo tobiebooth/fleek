@@ -6,6 +6,8 @@ class Domain extends BaseEntity
 {
     public $name;
     public $uuid;
+    public $title;
+    public $description;
     public $memory;
     public $currentMemory;
     public $vcpu;
