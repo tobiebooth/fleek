@@ -1,6 +1,6 @@
 <?php
 
-namespace Fleek;
+namespace Fleek\Entity;
 
 use Sabre\Xml\Writer;
 

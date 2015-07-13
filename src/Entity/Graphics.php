@@ -1,6 +1,6 @@
 <?php
 
-namespace Fleek;
+namespace Fleek\Entity;
 
 class Graphics extends BaseEntity
 {

@@ -9,6 +9,7 @@
         }
     ],
     "require": {
+        "ext-libvirt": "*",
         "sabre/xml": "^1.1"
     },
     "autoload": {

@@ -1,29 +1,26 @@
 <?php
 
-namespace Fleek;
+namespace Fleek\Entity;
 
 use Sabre\Xml\Writer;
 
-class Disk extends BaseEntity
+class Iface extends BaseEntity
 {
     public $source;
-    public $target;
-    public $readonly;
+    public $mac;
 
-    protected $entityName = 'disk';
+    protected $entityName = 'interface';
     protected $entityAttributes = [];
 
     /**
-     * Construct a new disk
+     * Construct a new interface
      *
-     * @param string disk type (file, block, dir, network, volume)
-     * @param string device (floppy, disk, cdrom, lun)
+     * @param string interface type (network, user, bridge, etc.)
      */
-    public function __construct($type, $device)
+    public function __construct($type)
     {
         $this->entityAttributes = [
-            'type' => $type,
-            'device' => $device
+            'type' => $type
         ];
     }
 
@@ -40,24 +37,17 @@ class Disk extends BaseEntity
                 'name' => 'source',
                 'value' => null,
                 'attributes' => [
-                    'file' => $this->source
+                    'network' => $this->source
                 ]
             ],
             [
-                'name' => 'target',
+                'name' => 'mac',
                 'value' => null,
                 'attributes' => [
-                    'dev' => $this->target
+                    'address' => $this->mac
                 ]
             ]
         ];
-
-        if ($this->readonly) {
-            $data[] = [
-                'name' => 'readonly',
-                'value' => null
-            ];
-        }
 
         $writer->write($data);
     }
