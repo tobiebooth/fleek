@@ -30,8 +30,9 @@ class QemuTcp implements AuthInterface
             )
         ;
 
-        if (!is_resource($resource))
-            throw new \Exception("Failed to authenticate: " . libvirt_get_last_error());
+        if (!is_resource($resource)) {
+                    throw new \Exception("Failed to authenticate: " . libvirt_get_last_error());
+        }
 
         return $resource;
     }

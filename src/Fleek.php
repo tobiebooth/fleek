@@ -58,10 +58,10 @@ class Fleek
     public function getDomainResource($domain)
     {
         $domain = libvirt_domain_lookup_by_name($this->resource, $domain);
-        if(is_resource($domain))
+        if (is_resource($domain))
             return $domain;
         $domain = libvirt_domain_lookup_by_uuid_string($this->resource, $domain);
-        if(is_resource($domain))
+        if (is_resource($domain))
             return $domain;
         throw new \Exception("Domain does not exist: " . libvirt_get_last_error());
     }
